@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Escova alisadora elétrica | BC Bella Choice</title>
+<title>Escova alisadora elétrica preta | BC Bella Choice</title>
 <meta name="description" content="Escova alisadora elétrica bivolt com 5 níveis de temperatura, de 130 a 200&nbsp;°C. Penteia e alisa ao mesmo tempo.">
-<meta name="theme-color" content="#f6f1e7">
+<meta name="theme-color" content="#f4f2ef">
 <meta property="og:title" content="Cabelo liso e alinhado enquanto você penteia">
 <meta property="og:description" content="Escova alisadora elétrica bivolt. Divulgação BC Bella Choice.">
 <meta property="og:image" content="imagem1.jpeg">
@@ -23,8 +23,8 @@ window.BELLA_CONFIG = {
   /* ID do pixel da Meta. Vazio = nada e enviado. */
   pixelId: "",
 
-  /* Paleta: "sage" (padrao), "vinho" ou "crepusculo" */
-  tema: "sage",
+  /* Paleta: "sage", "vinho", "crepusculo", "grafite" (preto), "rubi" (vermelho) ou "jade" (verde) */
+  tema: "grafite",
 
   /* Marca e contato */
   instagram: "https://instagram.com/bcbellachoice",
@@ -76,6 +76,18 @@ window.BELLA_CONFIG = {
   --fundo:#faf7f2; --superficie:#ffffff; --texto:#2e2124; --suave:#6b5a5e;
   --marca:#7b2d3b; --marca-forte:#5c1f2b; --marca-clara:#f2e3e5; --detalhe:#b08d57; --borda:#e5dad2;
 }
+[data-tema="grafite"] {
+  --fundo:#f4f2ef; --superficie:#fbfaf8; --texto:#1f1f1f; --suave:#5c5a57;
+  --marca:#3a3a3a; --marca-forte:#1c1c1c; --marca-clara:#e6e3de; --detalhe:#b8955a; --borda:#dcd8d1;
+}
+[data-tema="rubi"] {
+  --fundo:#fbf4f2; --superficie:#fffaf9; --texto:#2d1f1f; --suave:#6d5555;
+  --marca:#b3262e; --marca-forte:#8e1b22; --marca-clara:#f6dfdf; --detalhe:#c9a27a; --borda:#ecd9d6;
+}
+[data-tema="jade"] {
+  --fundo:#f2f6f3; --superficie:#fafcfa; --texto:#1d2a24; --suave:#55665e;
+  --marca:#2f7a5a; --marca-forte:#1f5c43; --marca-clara:#dcebe3; --detalhe:#b89b6a; --borda:#d5e2da;
+}
 [data-tema="crepusculo"] {
   --fundo:#f8f2ec; --superficie:#fffaf6; --texto:#33282a; --suave:#6e5f60;
   --marca:#a0605e; --marca-forte:#7c4544; --marca-clara:#f2e0da; --detalhe:#8b7aa8; --borda:#e6d8cc;
@@ -114,7 +126,8 @@ h1, h2 { font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif; font-
 .slide.faltando img, .slide.faltando video { visibility:hidden; }
 .pontos { position:absolute; left:0; right:0; bottom:12px; display:flex; justify-content:center; gap:7px; }
 .pontos button { width:7px; height:7px; padding:0; border:0; border-radius:99px; background:var(--superficie); opacity:.65; cursor:pointer; transition:width .3s, opacity .3s; }
-.pontos button[aria-current="true"] { width:22px; opacity:1; background:var(--marca-forte); }
+.pontos button { box-shadow:0 0 0 1px rgba(0,0,0,.18); }
+.pontos button[aria-current="true"] { width:22px; opacity:1; background:var(--detalhe); }
 .seta-car { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:0; background:var(--superficie); color:var(--texto); opacity:.85; display:grid; place-items:center; cursor:pointer; }
 .seta-car .icone { width:18px; height:18px; }
 .seta-car.ant { left:10px; } .seta-car.prox { right:10px; }
@@ -250,28 +263,26 @@ h2 { font-size:1.75rem; margin-bottom:16px; }
 
   <!-- 1. HEADLINE -->
   <section class="titulo">
-    <span class="etiqueta">Escova alisadora elétrica bivolt</span>
+    <span class="etiqueta">Escova alisadora elétrica bivolt · preta</span>
     <h1>Cabelo liso e alinhado enquanto você penteia</h1>
   </section>
 
   <!-- 2. CARROSSEL DE FOTOS E VIDEO
        - Coloque os arquivos na mesma pasta deste HTML, com estes nomes.
-       - Sem video? Apague do comentario "VIDEO" ate o comentario "FIM DO VIDEO".
+       - Esta pagina nao tem video. Para colocar um, adicione esta linha antes das fotos:
+         <div class="slide"><video src="video1.mp4" muted playsinline preload="metadata"></video></div>
        - Mais fotos? Copie uma linha <div class="slide">...</div> e troque o nome do arquivo.
-       - O video toca sem som e o carrossel passa para a proxima foto quando ele termina. -->
+       - Menos fotos? Apague a linha da foto que nao existir. -->
   <div class="carrossel" id="carrossel" aria-roledescription="carrossel" aria-label="Fotos do produto">
     <div class="trilho">
 
-      <!-- VIDEO -->
-     
-      <!-- FIM DO VIDEO -->
 
       <div class="slide"><img src="imagem1.jpeg" alt="Escova alisadora elétrica preta"></div>
-       <div class="slide"><img src="imagem2.jpeg" alt="Escova alisadora elétrica preta"></div>
-       <div class="slide"><img src="imagem3.jpeg" alt="Escova alisadora elétrica preta"></div>
-       <div class="slide"><img src="imagem4.jpeg" alt="Escova alisadora elétrica preta"></div>
-       <div class="slide"><img src="imagem5.jpeg" alt="Escova alisadora elétrica preta"></div>
-      <div class="slide"><img src="imagem6.jpeg" alt="Escova alisadora em uso no cabelo"></div>
+      <div class="slide"><img src="imagem2.jpeg" alt="Escova alisadora em uso no cabelo"></div>
+      <div class="slide"><img src="imagem3.jpeg" alt="Detalhe das cerdas da escova alisadora"></div>
+      <div class="slide"><img src="imagem4.jpeg" alt="Painel de temperatura da escova alisadora"></div>
+      <div class="slide"><img src="imagem5.jpeg" alt="Escova alisadora preta"></div>
+      <div class="slide"><img src="imagem6.jpeg" alt="Escova alisadora preta"></div>
 
     </div>
   </div>
@@ -323,7 +334,7 @@ h2 { font-size:1.75rem; margin-bottom:16px; }
       <li><svg class="icone"><use href="#i-check"/></svg>Penteia e alisa ao mesmo tempo</li>
       <li><svg class="icone"><use href="#i-check"/></svg>5 temperaturas, de 130 a 200&nbsp;°C</li>
       <li><svg class="icone"><use href="#i-check"/></svg>Bivolt automática, boa para viagem</li>
-      <li><svg class="icone"><use href="#i-check"/></svg>Leve, com pegada confortável</li>
+      <li><svg class="icone"><use href="#i-check"/></svg>Preta, leve e com pegada confortável</li>
     </ul>
     <div class="preco" data-preco></div>
     <p class="ancora">Sai pelo preço de uma ou duas escovas no salão, e você usa quantas vezes quiser.</p>
@@ -409,7 +420,7 @@ h2 { font-size:1.75rem; margin-bottom:16px; }
 (function () {
   "use strict";
   var C = window.BELLA_CONFIG || {}, doc = document;
-  var temas = ["sage", "vinho", "crepusculo"];
+  var temas = ["sage", "vinho", "crepusculo", "grafite", "rubi", "jade"];
   doc.documentElement.setAttribute("data-tema", temas.indexOf(C.tema) > -1 ? C.tema : "sage");
 
   function evento(nome, dados) {
